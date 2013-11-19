@@ -78,7 +78,9 @@ public class MainActivity extends Activity {
 		
 		private void search(){
 			
-		}		
+		}
+		
+		
 		
 	}
 
@@ -91,21 +93,25 @@ public class MainActivity extends Activity {
 		edit01 = (EditText) v.findViewById(R.id.edit01);
 		
 		if(edit01 != null){
+			
 			edit01.setOnEditorActionListener(onSearchListener);
+		
 		}
+		
 		return true;
 	}
 	@Override
 	public boolean onOptionsItemSelected(MenuItem item){
 		switch(item.getItemId()){
 		case R.id.menu_refresh:
-			Toast.makeText(this, "새로고침 메뉴를 선택했습니다.", Toast.LENGTH_SHORT);
+			Toast.makeText(this, "새로고침 메뉴를 선택했습니다.", Toast.LENGTH_SHORT).show();
 			return true;
+			
 		case R.id.menu_serarch:
-			Toast.makeText(this, "검색 메뉴를 선택했습니다.",  Toast.LENGTH_SHORT);
+			Toast.makeText(this, "검색 메뉴를 선택했습니다.",  Toast.LENGTH_SHORT).show();
 			return true;
 		case R.id.menu_settings:
-			Toast.makeText(this,"설정 메뉴를 선택하셨습니다.",Toast.LENGTH_SHORT);
+			Toast.makeText(this,"설정 메뉴를 선해갛셨습니다.",Toast.LENGTH_SHORT).show();
 			return true;
 			
 		}
@@ -128,6 +134,7 @@ public class MainActivity extends Activity {
 	};
 	private void search(){
 		String searchString = edit01.getEditableText().toString();
-		Toast.makeText(this, "검색어", Toast.LENGTH_SHORT).show();
+		Toast.makeText(this, "검색어"+searchString, Toast.LENGTH_SHORT).show();
+		edit01.setText(null);
 	}
 }

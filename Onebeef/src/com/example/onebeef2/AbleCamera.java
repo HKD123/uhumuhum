@@ -16,23 +16,23 @@ import android.widget.Toast;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.hardware.Camera;
-import android.hardware.Camera.CameraInfo;
 
 public class AbleCamera extends Activity {
 	public static String IMAGE_FILE = "capture.jpg";
-	
+
 	@Override
 	public void onCreate(Bundle savedInstanceState) {
-				super.onCreate(savedInstanceState);
+		super.onCreate(savedInstanceState);
 		setContentView(R.layout.ablecamera);
-		Toast.makeText(this, "카메라 인식", Toast.LENGTH_SHORT).show();
-		final CameraSurfaceView cameraView = new CameraSurfaceView( getApplicationContext());
+		Toast.makeText(this, "토오스트으", Toast.LENGTH_SHORT).show();
+		final CameraSurfaceView cameraView = new CameraSurfaceView(
+				getApplicationContext());
 		FrameLayout previewFrame = (FrameLayout) findViewById(R.id.previewFrame);
 		previewFrame.addView(cameraView);
 
 		Button saveBtn = (Button) findViewById(R.id.saveBtn);
 		saveBtn.setOnClickListener(new View.OnClickListener() {
-			
+
 			@Override
 			public void onClick(View v) {
 				// TODO Auto-generated method stub
@@ -63,8 +63,10 @@ public class AbleCamera extends Activity {
 						} catch (Exception e) {
 							Log.e("SampleCapture", "Failed to insert image.", e);
 						}
+
 					}
 				});
+
 			}
 		});
 	}
@@ -82,9 +84,9 @@ public class AbleCamera extends Activity {
 			mHolder.setType(SurfaceHolder.SURFACE_TYPE_PUSH_BUFFERS);
 			// TODO Auto-generated constructor stub
 		}
-		
+
 		@Override
-		public void surfaceChanged(SurfaceHolder holder, int format, int width, 
+		public void surfaceChanged(SurfaceHolder holder, int format, int width,
 				int height) {
 			// TODO Auto-generated method stub
 			camera.startPreview();
@@ -98,12 +100,7 @@ public class AbleCamera extends Activity {
 				camera.release();
 				camera = null;
 			}
-			
-			 /* CAMERA_FACING_FRONT가 전면카메라임, 후방카메라 사용하고 싶으면 CAMERA_FACING_BACK으로 변경 */
-	        camera = Camera.open(CameraInfo.CAMERA_FACING_FRONT);
-	        /* surface 사용시 카메라가 회전되어 있어 그에 대한 보정 */
-	        camera.setDisplayOrientation(90);		
-	        
+			camera = Camera.open();
 			try {
 				camera.setPreviewDisplay(mHolder);
 			} catch (Exception e) {
@@ -128,5 +125,7 @@ public class AbleCamera extends Activity {
 				return false;
 			}
 		}
+
 	}
+
 }
