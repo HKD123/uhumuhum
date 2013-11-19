@@ -32,6 +32,8 @@
         <activity android:name="Fragment02"></activity>
         <activity android:name="Fragment03"></activity>       
         <activity android:name="SelectedApp"></activity>
+        <activity android:name="AuthenticationCount"></activity>
+        <activity android:name="SetPassword"></activity>
     </application>
 
 </manifest>

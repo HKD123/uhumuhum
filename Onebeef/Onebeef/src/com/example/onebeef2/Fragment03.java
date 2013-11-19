@@ -38,11 +38,12 @@ public class Fragment03 extends Fragment {
 				switch(position){
 				
 				case  0 : 
-					Intent newActivity = new Intent(getActivity(), AbleCamera.class);
-					startActivity(newActivity);
+					Intent ableCameraActivity = new Intent(getActivity(), AbleCamera.class);
+					startActivity(ableCameraActivity);
 					break;
 				case  1 : 
-					Toast.makeText(getActivity(), toastMessage, Toast.LENGTH_SHORT).show();
+					Intent authenticationCountActivity = new Intent(getActivity(),AuthenticationCount.class);
+					startActivity(authenticationCountActivity);
 					break;
 				case  2 : 
 					Toast.makeText(getActivity(), toastMessage, Toast.LENGTH_SHORT).show();
@@ -54,7 +55,9 @@ public class Fragment03 extends Fragment {
 					Toast.makeText(getActivity(), toastMessage, Toast.LENGTH_SHORT).show();
 					break;
 				case  5 : 
-					Toast.makeText(getActivity(), toastMessage, Toast.LENGTH_SHORT).show();
+					Intent setPasswordActivity = new Intent(getActivity(),SetPassword.class);
+					startActivity(setPasswordActivity);
+					
 					break;
 				case  6 : 
 					Toast.makeText(getActivity(), toastMessage, Toast.LENGTH_SHORT).show();
