@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">OneBeef</string>
+    <string name="action_settings">Settings</string>
+    <string name="hello_world"></string>
+    <string name="menu_refresh">refresh</string>
+    <string name="menu_search">search</string>
+    <string name="menu_settings">settings</string>
+    <string name="title_activity_main">엑티비티메인</string>
+</resources>
