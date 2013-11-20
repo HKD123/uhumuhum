@@ -55,11 +55,13 @@ public class Fragment03 extends Fragment {
 					Toast.makeText(getActivity(), toastMessage, Toast.LENGTH_SHORT).show();
 					break;
 				case  5 : 
-					Intent setPasswordActivity = new Intent(getActivity(),SetPassword.class);
-					startActivity(setPasswordActivity);
+					Intent setNewPasswordActivity = new Intent(getActivity(),SetNewPassword.class);
+					startActivity(setNewPasswordActivity);
 					
 					break;
 				case  6 : 
+					Intent changePasswordActivity = new Intent(getActivity(),ChangePassword.class);
+					startActivity(changePasswordActivity);
 					Toast.makeText(getActivity(), toastMessage, Toast.LENGTH_SHORT).show();
 					break;
 				case  7 : 

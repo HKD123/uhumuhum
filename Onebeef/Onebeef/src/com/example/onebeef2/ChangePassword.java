@@ -18,7 +18,7 @@ import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
-public class SetPassword extends Activity {
+public class ChangePassword extends Activity {
 	protected static final String TAG = null;
 	EditText prePWD;
 	Button prebtn;
